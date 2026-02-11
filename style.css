@@ -440,6 +440,7 @@ a {
 
 .hero-btns {
     animation: fadeInUp 1s ease 0.6s both;
+    
 }
 
 .hero-image {
@@ -875,6 +876,7 @@ a {
 .portfolio-img {
     height: 250px;
     overflow: hidden;
+    position: relative;
 }
 
 .portfolio-img img {
@@ -903,42 +905,98 @@ a {
     margin-bottom: 15px;
 }
 
-/* Modal Image Gallery */
-.modal-image-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.modal-main-image {
+/* Portfolio Media Styles (for video) */
+.portfolio-media {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    position: relative;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
-.modal-main-image img {
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: white;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.play-button:hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+    color: var(--primary);
+}
+
+.portfolio-video-preview {
+    display: none;
+}
+
+/* Modal Image Gallery - Updated for Video */
+.modal-image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-main-media {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.modal-main-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.modal-main-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
 .modal-thumbnails {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .modal-thumbnail {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     opacity: 0.7;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 3px solid transparent;
+    position: relative;
 }
 
 .modal-thumbnail:hover,
@@ -951,6 +1009,22 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.small-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+
+.modal-thumbnail.active .small-play-icon {
+    color: var(--primary);
 }
 
 /* Contact Section */
@@ -985,6 +1059,21 @@ a {
     color: var(--primary);
     font-size: 1.5rem;
     margin-right: 20px;
+}
+
+[dir="rtl"] .contact-icon {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.contact-details h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.contact-details p {
+    color: var(--gray);
+    margin-bottom: 0;
 }
 
 /* Footer */
@@ -1065,6 +1154,11 @@ footer::after {
     background: var(--primary);
 }
 
+[dir="rtl"] .footer-links h5::after {
+    left: auto;
+    right: 0;
+}
+
 .footer-links ul {
     list-style: none;
     padding: 0;
@@ -1084,10 +1178,19 @@ footer::after {
     padding-left: 5px;
 }
 
+[dir="rtl"] .footer-links a:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
 .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+}
+
+[dir="rtl"] .social-icons {
+    justify-content: flex-end;
 }
 
 .social-icon {
@@ -1126,6 +1229,11 @@ footer::after {
     width: 30px;
 }
 
+[dir="rtl"] .contact-info-footer .contact-item i {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
 .copyright {
     text-align: center;
     padding-top: 30px;
@@ -1133,6 +1241,47 @@ footer::after {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #B0B7C3;
     font-size: 0.9rem;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .navbar-brand {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .nav-link::after {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .theme-toggle,
+[dir="rtl"] .lang-toggle {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+[dir="rtl"] .btn-primary-custom,
+[dir="rtl"] .btn-secondary-custom {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+[dir="rtl"] .info-list i {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+[dir="rtl"] .portfolio-tag {
+    float: right;
 }
 
 /* Animations */
@@ -1206,6 +1355,10 @@ footer::after {
     .stats-number {
         font-size: 1.5rem;
     }
+    
+    .modal-main-media {
+        height: 350px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1274,8 +1427,12 @@ footer::after {
     }
     
     .modal-thumbnail {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .modal-main-media {
+        height: 300px;
     }
 }
 
@@ -1339,13 +1496,18 @@ footer::after {
         font-size: 0.6rem;
     }
     
-    .modal-main-image {
+    .modal-main-media {
         height: 100%;
+        width: 100%;
     }
     
     .modal-thumbnail {
-        width: 45px;
-        height: 45px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .play-button {
+        font-size: 2.5rem;
     }
 }
 
@@ -1367,5 +1529,33 @@ footer::after {
         100% {
             transform: rotate(calc(var(--angle) + 360deg)) translateX(70px) rotate(calc(-1 * var(--angle) - 360deg));
         }
+    }
+    
+    .modal-main-media {
+        height: 200px;
+    }
+    
+    .modal-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar, .hero-btns, .portfolio-filter, .footer-links, .social-icons {
+        display: none;
+    }
+    
+    body, .dark-mode body {
+        background: white;
+        color: black;
+    }
+    
+    .section-title h2 {
+        color: black;
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
     }
 }

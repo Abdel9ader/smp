@@ -49,10 +49,11 @@ const textContent = {
         'filter-all': 'All',
         'filter-ecommerce': 'E-commerce',
         'filter-medical': 'Medical',
+        'filter-education': 'Education',
         'filter-tech': 'Technology',
         'filter-gaming': 'Gaming',
         'filter-marketing': 'Marketing',
-
+        'filter-fashion': 'Fashion',
         'filter-food': 'Food & Beverage',
         'modal-platforms-title': 'Platforms',
         'modal-results-title': 'Results',
@@ -123,8 +124,12 @@ const textContent = {
         'portfolio-subtitle': 'المشاريع والحملات الحديثة التي عملت عليها',
         'filter-all': 'الكل',
         'filter-ecommerce': 'التجارة الإلكترونية',
-        'filter-tech': 'التكنولوجيا',
-        'filter-fashion': 'الأزياء',
+        'filter-medical': 'طبي',
+        'filter-education': 'تعليم',
+        'filter-tech': 'تكنولوجيا',
+        'filter-gaming': 'ألعاب',
+        'filter-marketing': 'تسويق',
+        'filter-fashion': 'أزياء',
         'filter-food': 'الطعام والمشروبات',
         'modal-platforms-title': 'المنصات',
         'modal-results-title': 'النتائج',
@@ -149,163 +154,177 @@ const textContent = {
     }
 };
 
-// Portfolio data with images
+// Portfolio data with images and videos - Bilingual
 const portfolioData = [
     {
         id: 1,
-        title: 'Be Well',
-        industry: 'medical',
-        description: 'Developed and executed a comprehensive social media strategy for an electronics e-commerce store, resulting in a 40% increase in online sales.',
-        platforms: 'Instagram, Facebook, TikTok',
-        results: '40% increase in sales, 25% growth in followers',
+        title: { en: 'Be Well', ar: 'بي ويل' },
+        industry: { en: 'Medical', ar: 'طبي' },
+        description: {
+            en: 'Managed and grew the social media presence of a medical and physical therapy center over a long-term period. Built and executed a data-driven content strategy focused on increasing reach, engagement, and brand trust, while optimizing posts based on audience behavior and platform insights.',
+            ar: 'إدارة وتنمية تواجد مركز طبي وعلاج طبيعي على وسائل التواصل الاجتماعي على المدى الطويل. بناء وتنفيذ استراتيجية محتوى تعتمد على البيانات تركز على زيادة الوصول والتفاعل وثقة العلامة التجارية، مع تحسين المنشورات بناءً على سلوك الجمهور ورؤى المنصة.'
+        },
+        platforms: { en: 'Facebook, Instagram', ar: 'فيسبوك، انستغرام' },
+        results: {
+            en: 'Achieved more than 5× increase in reach and engagement rates, with consistent growth in audience interaction and overall page performance',
+            ar: 'حققت أكثر من 5 أضعاف في معدلات الوصول والتفاعل، مع نمو مستمر في تفاعل الجمهور وأداء الصفحة بشكل عام'
+        },
         color: '#6C63FF',
-        icon: 'fas fa-shopping-cart',
-        images: [
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well1.jpg',
-            './assets/brand1/be-well2.jpg',
-            './assets/brand1/be-well3.jpg',
-            './assets/brand1/be-well4.jpg',
-            './assets/brand1/be-well5.jpg',
-            './assets/brand1/be-well6.jpg'
-
+        icon: 'fas fa-heartbeat',
+        media: [
+            { type: 'image', src: './assets/brand1/be-well.jpg' },
+            { type: 'image', src: './assets/brand1/be-well1.jpg' },
+            { type: 'image', src: './assets/brand1/be-well2.jpg' },
+            { type: 'image', src: './assets/brand1/be-well3.jpg' },
+            { type: 'image', src: './assets/brand1/be-well4.jpg' },
+            { type: 'image', src: './assets/brand1/be-well5.jpg' },
+            { type: 'image', src: './assets/brand1/be-well6.jpg' }
         ]
     },
     {
         id: 2,
-        title: 'Sigma Store',
-        industry: 'gaming',
-        description: 'Created a content strategy and influencer partnerships for a gaming brand, increasing engagement by 60% and brand awareness.',
-        platforms: 'Instagram, Pinterest, TikTok',
-        results: '60% engagement increase, 15K new followers',
+        title: { en: 'Sigma Store', ar: 'سيجما ستور' },
+        industry: { en: 'Gaming', ar: 'ألعاب' },
+        description: {
+            en: 'Created a content strategy and influencer partnerships for a gaming brand, increasing engagement by 60% and brand awareness across multiple platforms.',
+            ar: 'إنشاء استراتيجية محتوى وشراكات مؤثرين لعلامة تجارية للألعاب، مما زاد التفاعل بنسبة 60٪ والوعي بالعلامة التجارية عبر منصات متعددة.'
+        },
+        platforms: { en: 'Instagram, TikTok, Discord', ar: 'انستغرام، تيك توك، ديسكورد' },
+        results: { en: '60% engagement increase, 15K new followers', ar: 'زيادة التفاعل 60٪، 15 ألف متابع جديد' },
         color: '#FF6584',
-        icon: 'fas fa-tshirt',
-        images: [
-            './assets/brand2/ss-store.jpg',
-            './assets/brand2/ss-store1.jpg',
-            './assets/brand2/ss-store2.jpg',
-            './assets/brand2/ss-store3.jpg',
-            './assets/brand2/ss-store4.jpg',
-            './assets/brand2/ss-store5.jpg',
-            './assets/brand2/ss-store6.png',
-            './assets/brand2/ss-store7.jpg',
-            './assets/brand2/ss-store8.jpg',
+        icon: 'fas fa-gamepad',
+        media: [
+            { type: 'image', src: './assets/brand2/ss-store.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store1.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store2.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store3.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store4.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store5.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store6.png' },
+            { type: 'image', src: './assets/brand2/ss-store7.jpg' },
+            { type: 'image', src: './assets/brand2/ss-store8.jpg' }
         ]
     },
     {
         id: 3,
-        title: 'Hydra Tech',
-        industry: 'tech',
-        description: 'Managed social media presence for a restaurant chain, focusing on visual content and local engagement strategies.',
-        platforms: 'Instagram, Facebook, Twitter',
-        results: 'Tripled online orders, 50% increase in reservations',
+        title: { en: 'Hydra Tech', ar: 'هايدرا تك' },
+        industry: { en: 'Technology', ar: 'تكنولوجيا' },
+        description: {
+            en: 'Managed social media presence for a technology company, focusing on B2B content and thought leadership strategies.',
+            ar: 'إدارة التواجد على وسائل التواصل الاجتماعي لشركة تكنولوجيا، مع التركيز على محتوى B2B واستراتيجيات القيادة الفكرية.'
+        },
+        platforms: { en: 'LinkedIn, Twitter, YouTube', ar: 'لينكد إن، تويتر، يوتيوب' },
+        results: { en: '200% increase in leads, 150% follower growth', ar: 'زيادة 200٪ في العملاء المحتملين، نمو 150٪ في المتابعين' },
         color: '#36D1DC',
-        icon: 'fas fa-utensils',
-        images: [
-            './assets/brand3/hydra.jpg',
-            './assets/brand3/hydra1.jpg',
-            './assets/brand3/hydra2.jpg',
-            './assets/brand3/hydra3.jpg',
-            './assets/brand3/hydra4.jpg',
-            './assets/brand3/hydra5.jpg',
-            './assets/brand3/hydra6.jpg',
-            
-
+        icon: 'fas fa-microchip',
+        media: [
+            { type: 'image', src: './assets/brand3/hydra.jpg' },
+            { type: 'image', src: './assets/brand3/hydra1.jpg' },
+            { type: 'image', src: './assets/brand3/hydra2.jpg' },
+            { type: 'image', src: './assets/brand3/hydra3.jpg' },
+            { type: 'image', src: './assets/brand3/hydra4.jpg' },
+            { type: 'image', src: './assets/brand3/hydra5.jpg' },
+            { type: 'image', src: './assets/brand3/hydra6.jpg' }
         ]
     },
     {
         id: 4,
-        title: 'LinkMarket',
-        industry: 'marketing',
-        description: 'Built social media presence from scratch for a tech startup, positioning them as industry thought leaders.',
-        platforms: 'LinkedIn, Twitter, YouTube',
-        results: 'Generated 500+ qualified leads, 200% follower growth',
+        title: { en: 'LinkMarket', ar: 'لينك ماركت' },
+        industry: { en: 'Marketing', ar: 'تسويق' },
+        description: {
+            en: 'Built social media presence from scratch for a marketing agency, positioning them as industry thought leaders.',
+            ar: 'بناء تواجد على وسائل التواصل الاجتماعي من الصفر لوكالة تسويق، ووضعهم كقادة فكر في الصناعة.'
+        },
+        platforms: { en: 'LinkedIn, Instagram, Facebook', ar: 'لينكد إن، انستغرام، فيسبوك' },
+        results: { en: 'Generated 500+ qualified leads, 200% follower growth', ar: 'توليد 500+ عميل محتمل مؤهل، نمو 200٪ في المتابعين' },
         color: '#10B981',
-        icon: 'fas fa-laptop-code',
-        images: [
-            './assets/brand4/link.jpg',
-            './assets/brand4/link1.jpg',
-            './assets/brand4/link2.jpg',
-            './assets/brand4/link3.jpg',
-            './assets/brand4/link4.jpg',
-            './assets/brand4/link5.jpg',
-            './assets/brand4/link6.jpg'
-
+        icon: 'fas fa-chart-line',
+        media: [
+            { type: 'image', src: './assets/brand4/link.jpg' },
+            { type: 'image', src: './assets/brand4/link1.jpg' },
+            { type: 'image', src: './assets/brand4/link2.jpg' },
+            { type: 'image', src: './assets/brand4/link3.jpg' },
+            { type: 'image', src: './assets/brand4/link4.jpg' },
+            { type: 'image', src: './assets/brand4/link5.jpg' },
+            { type: 'image', src: './assets/brand4/link6.jpg' }
         ]
     },
     {
         id: 5,
-        title: 'EcoWear Sustainable Fashion',
-        industry: 'fashion',
-        description: 'Developed a sustainability-focused content strategy for an eco-friendly clothing brand.',
-        platforms: 'Instagram, Pinterest, LinkedIn',
-        results: '35% increase in website traffic, 20% conversion rate',
+        title: { en: 'Nukhbat Al-Atour', ar: 'نخبة العطور' },
+        industry: { en: 'E-commerce', ar: 'التجارة الإلكترونية' },
+        description: {
+            en: 'Developed a comprehensive e-commerce social media strategy for a perfume brand, focusing on visual storytelling and influencer collaborations.',
+            ar: 'تطوير استراتيجية شاملة للتجارة الإلكترونية على وسائل التواصل الاجتماعي لعلامة تجارية للعطور، مع التركيز على سرد القصص البصري والتعاون مع المؤثرين.'
+        },
+        platforms: { en: 'Instagram, Pinterest, Facebook', ar: 'انستغرام، بنترست، فيسبوك' },
+        results: { en: '35% increase in website traffic, 20% conversion rate', ar: 'زيادة 35٪ في حركة المرور على الموقع، معدل تحويل 20٪' },
         color: '#F59E0B',
-        icon: 'fas fa-leaf',
-        images: [
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg'
-
+        icon: 'fas fa-crown',
+        media: [
+            { type: 'image', src: './assets/brand5/N.jpg' },
+            { type: 'video', src: './assets/brand5/v1.mp4', thumbnail: './assets/brand5/N.jpg' },
+            { type: 'video', src: './assets/brand5/v2.mp4', thumbnail: './assets/brand5/N.jpg' },
+            { type: 'video', src: './assets/brand5/v3.mp4', thumbnail: './assets/brand5/N.jpg' },
         ]
     },
     {
         id: 6,
-        title: 'BrewMasters Coffee',
-        industry: 'food',
-        description: 'Created a community-focused social media strategy for a local coffee shop chain.',
-        platforms: 'Instagram, Facebook, Twitter',
-        results: 'Doubled local engagement, 40% increase in foot traffic',
+        title: { en: 'Ghabor Academy', ar: 'أكاديمية غابور' },
+        industry: { en: 'Education', ar: 'تعليم' },
+        description: {
+            en: 'Created a comprehensive social media strategy for an educational platform, including video content and student engagement campaigns.',
+            ar: 'إنشاء استراتيجية شاملة لوسائل التواصل الاجتماعي لمنصة تعليمية، بما في ذلك محتوى الفيديو وحملات تفاعل الطلاب.'
+        },
+        platforms: { en: 'YouTube, Instagram, Facebook', ar: 'يوتيوب، انستغرام، فيسبوك' },
+        results: { en: 'Tripled enrollment, 80% increase in engagement', ar: 'تضاعف التسجيل ثلاث مرات، زيادة 80٪ في التفاعل' },
         color: '#8B5CF6',
-        icon: 'fas fa-coffee',
-        images: [
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg'
-
+        icon: 'fas fa-graduation-cap',
+        media: [
+            { type: 'image', src: './assets/brand6/g1.png' },
+            { type: 'video', src: './assets/brand6/v1.mp4', thumbnail: './assets/brand6/g1.png' },
+            { type: 'video', src: './assets/brand6/v2.mp4', thumbnail: './assets/brand6/g1.png' },
         ]
     },
     {
         id: 7,
-        title: 'BrewMasters Coffee',
-        industry: 'food',
-        description: 'Created a community-focused social media strategy for a local coffee shop chain.',
-        platforms: 'Instagram, Facebook, Twitter',
-        results: 'Doubled local engagement, 40% increase in foot traffic',
+        title: { en: 'Mess', ar: 'ميس' },
+        industry: { en: 'Fashion', ar: 'أزياء' },
+        description: {
+            en: 'Created a comprehensive social media strategy for a fashion brand, including video content and engagement campaigns.',
+            ar: 'إنشاء استراتيجية شاملة لوسائل التواصل الاجتماعي لعلامة تجارية للأزياء، بما في ذلك محتوى الفيديو وحملات التفاعل.'
+        },
+        platforms: { en: 'YouTube, Instagram, Facebook', ar: 'يوتيوب، انستغرام، فيسبوك' },
+        results: { en: 'Tripled engagement, 80% increase in followers', ar: 'تضاعف التفاعل ثلاث مرات، زيادة 80٪ في المتابعين' },
         color: '#8B5CF6',
-        icon: 'fas fa-coffee',
-        images: [
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg',
-            './assets/brand1/be-well.jpg'
-
+        icon: 'fas fa-tshirt',
+        media: [
+            { type: 'image', src: './assets/brand7/m.jpeg' },
+            { type: 'video', src: './assets/brand7/m1.mp4', thumbnail: './assets/brand7/m.jpeg' },
+            { type: 'video', src: './assets/brand7/m2.mp4', thumbnail: './assets/brand7/m.jpeg' },
         ]
-    }
+    },
 ];
 
-// Placeholder images for portfolio items (in case actual images are not available)
+// Placeholder images for portfolio items
 const placeholderImages = {
     ecommerce: './assets/portfolio/placeholder/ecommerce.jpg',
+    medical: './assets/portfolio/placeholder/medical.jpg',
+    education: './assets/portfolio/placeholder/education.jpg',
+    tech: './assets/portfolio/placeholder/tech.jpg',
+    gaming: './assets/portfolio/placeholder/gaming.jpg',
+    marketing: './assets/portfolio/placeholder/marketing.jpg',
     fashion: './assets/portfolio/placeholder/fashion.jpg',
     food: './assets/portfolio/placeholder/food.jpg',
-    tech: './assets/portfolio/placeholder/tech.jpg'
+    default: './assets/portfolio/placeholder/default.jpg'
 };
 
 // Social media links
 const socialLinks = {
-    'facebook': 'https://facebook.com',
-    'twitter': 'https://twitter.com',
-    'linkedin': 'https://linkedin.com',
-    'instagram': 'https://instagram.com',
+    'facebook': 'https://facebook.com/abdelkader.mohamed',
+    'twitter': 'https://twitter.com/abdelkader',
+    'linkedin': 'https://linkedin.com/in/abdelkader-mohamed',
+    'instagram': 'https://instagram.com/abdelkader.smm',
     'whatsapp': 'https://wa.me/201013706142'
 };
 
@@ -321,6 +340,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
         document.getElementById('themeToggle').classList.add('dark-mode');
     }
+    
+    // Initialize social orbs with random angles
+    initializeSocialOrbs();
     
     // Render portfolio items
     renderPortfolioItems('all');
@@ -343,6 +365,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Stats hover effect
     setupStatsHover();
 });
+
+// Initialize social orbs with random angles
+function initializeSocialOrbs() {
+    const orbs = document.querySelectorAll('.social-orb');
+    const angles = [0, 90, 180, 270];
+    const delays = [0, 2, 4, 6];
+    
+    orbs.forEach((orb, index) => {
+        orb.style.setProperty('--angle', `${angles[index % angles.length]}deg`);
+        orb.style.setProperty('--delay', `${delays[index % delays.length]}s`);
+    });
+}
 
 // Update page language
 function updateLanguage(lang) {
@@ -383,36 +417,92 @@ function updateLanguage(lang) {
         document.documentElement.lang = 'en';
         document.body.style.fontFamily = "'Poppins', sans-serif";
     }
+    
+    // Re-render portfolio with new language
+    const activeFilter = document.querySelector('.filter-btn.active');
+    if (activeFilter) {
+        const filter = activeFilter.getAttribute('data-filter');
+        renderPortfolioItems(filter);
+    } else {
+        renderPortfolioItems('all');
+    }
 }
 
 // Render portfolio items
 function renderPortfolioItems(filter) {
     const container = document.getElementById('portfolio-container');
+    if (!container) return;
+    
     container.innerHTML = '';
     
-    const filteredItems = filter === 'all' 
-        ? portfolioData 
-        : portfolioData.filter(item => item.industry === filter);
+    // Get current language
+    const currentLang = localStorage.getItem('lang') || 'en';
+    
+    let filteredItems = portfolioData;
+    
+    if (filter !== 'all') {
+        filteredItems = portfolioData.filter(item => {
+            const industryEn = item.industry.en.toLowerCase();
+            const industryAr = item.industry.ar;
+            const filterLower = filter.toLowerCase();
+            
+            return industryEn === filterLower || 
+                   industryAr === filter || 
+                   industryEn.includes(filterLower) ||
+                   item.industry.en === filter;
+        });
+    }
     
     filteredItems.forEach(item => {
         const portfolioItem = document.createElement('div');
         portfolioItem.className = 'portfolio-item';
         
-        // Use actual image if available, otherwise use placeholder
-        const imgSrc = item.images && item.images[0] ? item.images[0] : 
-                      placeholderImages[item.industry] || './assets/portfolio/placeholder/default.jpg';
+        // Get first media item
+        const firstMedia = item.media && item.media[0] ? item.media[0] : 
+                          { type: 'image', src: placeholderImages.default };
+        
+        let mediaHTML = '';
+        if (firstMedia.type === 'video') {
+            const thumbnailSrc = firstMedia.thumbnail || firstMedia.src;
+            mediaHTML = `
+                <div class="portfolio-media video-thumbnail" onclick="event.stopPropagation()">
+                    <img src="${thumbnailSrc}" alt="${item.title[currentLang]}" onerror="this.src='${placeholderImages.default}'">
+                    <div class="play-button">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <video class="portfolio-video-preview" style="display:none;" preload="none">
+                        <source src="${firstMedia.src}" type="video/mp4">
+                    </video>
+                </div>
+            `;
+        } else {
+            mediaHTML = `
+                <div class="portfolio-media">
+                    <img src="${firstMedia.src}" alt="${item.title[currentLang]}" onerror="this.src='${placeholderImages.default}'">
+                </div>
+            `;
+        }
+        
+        // Get industry display name
+        const industryDisplay = item.industry[currentLang] || item.industry.en;
+        
+        // Get shortened description
+        const shortDesc = item.description[currentLang].substring(0, 100) + '...';
+        
+        // Get platforms display
+        const platformsDisplay = item.platforms[currentLang];
         
         portfolioItem.innerHTML = `
             <div class="portfolio-img">
-                <img src="${imgSrc}" alt="${item.title}" onerror="this.src='./assets/portfolio/placeholder/default.jpg'">
+                ${mediaHTML}
             </div>
             <div class="portfolio-content">
-                <span class="portfolio-tag">${item.industry.charAt(0).toUpperCase() + item.industry.slice(1)}</span>
-                <h4>${item.title}</h4>
-                <p>${item.description}</p>
+                <span class="portfolio-tag">${industryDisplay}</span>
+                <h4>${item.title[currentLang]}</h4>
+                <p>${shortDesc}</p>
                 <div class="d-flex justify-content-between align-items-center mt-3">
-                    <small><strong>Platforms:</strong> ${item.platforms}</small>
-                    <button class="btn btn-sm btn-outline-primary view-details" data-id="${item.id}">Details</button>
+                    <small><strong>${currentLang === 'en' ? 'Platforms:' : 'المنصات:'}</strong> ${platformsDisplay}</small>
+                    <button class="btn btn-sm btn-outline-primary view-details" data-id="${item.id}">${currentLang === 'en' ? 'Details' : 'التفاصيل'}</button>
                 </div>
             </div>
         `;
@@ -422,9 +512,19 @@ function renderPortfolioItems(filter) {
     
     // Add event listeners to view details buttons
     document.querySelectorAll('.view-details').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
             const id = parseInt(this.getAttribute('data-id'));
             showPortfolioDetails(id);
+        });
+    });
+    
+    // Add event listeners to video thumbnails
+    document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+        thumbnail.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const itemId = this.closest('.portfolio-item').querySelector('.view-details').getAttribute('data-id');
+            showPortfolioDetails(parseInt(itemId));
         });
     });
 }
@@ -448,24 +548,43 @@ function showPortfolioDetails(id) {
     const modalPlatformsTitle = document.getElementById('modal-platforms-title');
     const modalResultsTitle = document.getElementById('modal-results-title');
     
-    if (modalTitle) modalTitle.textContent = item.title;
+    if (modalTitle) modalTitle.textContent = item.title[currentLang];
     
-    // Create image gallery
+    // Get industry display
+    const industryDisplay = item.industry[currentLang] || item.industry.en;
+    
+    // Create media gallery
     if (modalGallery) {
-        let galleryHTML = '<div class="modal-main-image">';
+        let galleryHTML = '<div class="modal-main-media">';
         
-        // Use actual images if available, otherwise use placeholders
-        const images = item.images && item.images.length > 0 ? item.images : 
-                      [placeholderImages[item.industry] || './assets/portfolio/placeholder/default.jpg'];
+        const media = item.media && item.media.length > 0 ? item.media : 
+                      [{ type: 'image', src: placeholderImages.default }];
         
-        galleryHTML += `<img src="${images[0]}" alt="${item.title} - Image 1" id="modal-main-img" onerror="this.src='./assets/portfolio/placeholder/default.jpg'">`;
+        // First media item (main display)
+        if (media[0].type === 'video') {
+            galleryHTML += `
+                <video controls class="modal-main-video" poster="${media[0].thumbnail || ''}">
+                    <source src="${media[0].src}" type="video/mp4">
+                    ${currentLang === 'en' ? 'Your browser does not support the video tag.' : 'متصفحك لا يدعم تشغيل الفيديو.'}
+                </video>
+            `;
+        } else {
+            galleryHTML += `<img src="${media[0].src}" alt="${item.title[currentLang]} - Image 1" id="modal-main-img" onerror="this.src='${placeholderImages.default}'">`;
+        }
+        
         galleryHTML += '</div>';
         
-        if (images.length > 1) {
+        // Thumbnails for all media
+        if (media.length > 1) {
             galleryHTML += '<div class="modal-thumbnails">';
-            images.forEach((img, index) => {
-                galleryHTML += `<div class="modal-thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">
-                    <img src="${img}" alt="${item.title} - Thumbnail ${index + 1}" onerror="this.src='./assets/portfolio/placeholder/default.jpg'">
+            media.forEach((mediaItem, index) => {
+                const thumbnailSrc = mediaItem.type === 'video' 
+                    ? (mediaItem.thumbnail || placeholderImages.default) 
+                    : mediaItem.src;
+                
+                galleryHTML += `<div class="modal-thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}" data-type="${mediaItem.type}" data-src="${mediaItem.src}" data-thumbnail="${mediaItem.thumbnail || ''}">
+                    <img src="${thumbnailSrc}" alt="${item.title[currentLang]} - Thumbnail ${index + 1}" onerror="this.src='${placeholderImages.default}'">
+                    ${mediaItem.type === 'video' ? '<i class="fas fa-play-circle small-play-icon"></i>' : ''}
                 </div>`;
             });
             galleryHTML += '</div>';
@@ -477,9 +596,20 @@ function showPortfolioDetails(id) {
         document.querySelectorAll('.modal-thumbnail').forEach(thumbnail => {
             thumbnail.addEventListener('click', function() {
                 const index = this.getAttribute('data-index');
-                const mainImg = document.getElementById('modal-main-img');
-                if (mainImg) {
-                    mainImg.src = images[index];
+                const type = this.getAttribute('data-type');
+                const src = this.getAttribute('data-src');
+                const thumbnailSrc = this.getAttribute('data-thumbnail');
+                const mainMediaContainer = document.querySelector('.modal-main-media');
+                
+                if (type === 'video') {
+                    mainMediaContainer.innerHTML = `
+                        <video controls class="modal-main-video" poster="${thumbnailSrc}">
+                            <source src="${src}" type="video/mp4">
+                            ${currentLang === 'en' ? 'Your browser does not support the video tag.' : 'متصفحك لا يدعم تشغيل الفيديو.'}
+                        </video>
+                    `;
+                } else {
+                    mainMediaContainer.innerHTML = `<img src="${src}" alt="${item.title[currentLang]} - Image ${parseInt(index) + 1}" id="modal-main-img" onerror="this.src='${placeholderImages.default}'">`;
                 }
                 
                 // Update active class
@@ -489,10 +619,10 @@ function showPortfolioDetails(id) {
         });
     }
     
-    if (modalIndustry) modalIndustry.innerHTML = `<strong>Industry:</strong> ${item.industry.charAt(0).toUpperCase() + item.industry.slice(1)}`;
-    if (modalDescription) modalDescription.textContent = item.description;
-    if (modalPlatforms) modalPlatforms.textContent = item.platforms;
-    if (modalResults) modalResults.textContent = item.results;
+    if (modalIndustry) modalIndustry.innerHTML = `<strong>${currentLang === 'en' ? 'Industry:' : 'المجال:'}</strong> ${industryDisplay}`;
+    if (modalDescription) modalDescription.textContent = item.description[currentLang];
+    if (modalPlatforms) modalPlatforms.textContent = item.platforms[currentLang];
+    if (modalResults) modalResults.textContent = item.results[currentLang];
     if (modalClose) modalClose.textContent = textContent[currentLang]['modal-close'];
     if (modalPlatformsTitle) modalPlatformsTitle.textContent = textContent[currentLang]['modal-platforms-title'];
     if (modalResultsTitle) modalResultsTitle.textContent = textContent[currentLang]['modal-results-title'];
@@ -505,27 +635,29 @@ function showPortfolioDetails(id) {
 // Setup event listeners
 function setupEventListeners() {
     // Language toggle
-    document.getElementById('langToggle').addEventListener('click', function() {
-        const currentLang = localStorage.getItem('lang') || 'en';
-        const newLang = currentLang === 'en' ? 'ar' : 'en';
-        updateLanguage(newLang);
-        
-        // Re-render portfolio with new language
-        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        renderPortfolioItems(activeFilter);
-    });
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('lang') || 'en';
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            updateLanguage(newLang);
+        });
+    }
     
     // Dark mode toggle
-    document.getElementById('themeToggle').addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        this.classList.toggle('dark-mode');
-        
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('darkMode', 'true');
-        } else {
-            localStorage.setItem('darkMode', 'false');
-        }
-    });
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                localStorage.setItem('darkMode', 'false');
+            }
+        });
+    }
     
     // Portfolio filter buttons
     document.querySelectorAll('.filter-btn').forEach(button => {
@@ -551,13 +683,44 @@ function setupEventListeners() {
     if (emailBtn) {
         emailBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = 'mailto:bdelkadermoamed@gmail.com?subject=Social Media Inquiry&body=Hello Abdelkader, I would like to discuss a potential project with you.';
+            window.location.href = 'mailto:abdelkader.mohamed@gmail.com?subject=Social Media Inquiry&body=Hello Abdelkader, I would like to discuss a potential project with you.';
+        });
+    }
+    
+    // Contact button in hero
+    const contactBtn = document.getElementById('contact-btn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const contactSection = document.querySelector('#contact');
+            if (contactSection) {
+                window.scrollTo({
+                    top: contactSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+    
+    // Work button in hero
+    const workBtn = document.getElementById('work-btn');
+    if (workBtn) {
+        workBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const portfolioSection = document.querySelector('#portfolio');
+            if (portfolioSection) {
+                window.scrollTo({
+                    top: portfolioSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
         });
     }
     
     // Social orbs in profile image
     document.querySelectorAll('.social-orb').forEach(orb => {
-        orb.addEventListener('click', function() {
+        orb.addEventListener('click', function(e) {
+            e.stopPropagation();
             const iconClass = this.querySelector('i').className;
             let platform = '';
             
@@ -565,6 +728,7 @@ function setupEventListeners() {
             else if (iconClass.includes('facebook')) platform = 'facebook';
             else if (iconClass.includes('linkedin')) platform = 'linkedin';
             else if (iconClass.includes('twitter')) platform = 'twitter';
+            else if (iconClass.includes('whatsapp')) platform = 'whatsapp';
             
             const url = socialLinks[platform];
             if (url) {
@@ -631,19 +795,21 @@ function setupNavbarOnScroll() {
     
     window.addEventListener('scroll', function() {
         let current = '';
+        const scrollPosition = window.scrollY + 100;
         
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
         
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
+            const href = link.getAttribute('href');
+            if (href === `#${current}`) {
                 link.classList.add('active');
             }
         });
@@ -663,12 +829,13 @@ function initializeAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
     // Observe elements to animate
-    document.querySelectorAll('.skill-card, .portfolio-item, .edu-card, .contact-item').forEach(el => {
+    document.querySelectorAll('.skill-card, .portfolio-item, .edu-card, .contact-item, .stats-circle').forEach(el => {
         observer.observe(el);
     });
 }
@@ -687,3 +854,9 @@ function setupStatsHover() {
         });
     });
 }
+
+// Handle window resize
+window.addEventListener('resize', function() {
+    // Re-initialize social orbs positions
+    initializeSocialOrbs();
+});
