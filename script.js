@@ -71,7 +71,7 @@ const textContent = {
         'footer-portfolio': 'Portfolio',
         'footer-contact': 'Contact',
         'contact-info-title': 'Contact Info',
-        'copyright-text': 'Abdelkader Mohamed © 2026. All Rights Reserved.',
+        'copyright-text': '© 2026 Abdelkader Mohamed. All rights reserved.',
         
         // Modal
         'modal-close': 'Close'
@@ -85,7 +85,7 @@ const textContent = {
         'nav-contact': 'تواصل',
         
         // Hero section
-        'hero-title': 'عبد القادر محمد',
+        'hero-title': 'عبدالقادر محمد',
         'hero-subtitle': 'أخصائي وسائل التواصل الاجتماعي',
         'hero-description': 'دفع نمو العلامات التجارية من خلال استراتيجيات وسائل التواصل الاجتماعي القائمة على البيانات. مع خبرة عامين في تحويل الوجود الرقمي للعلامات التجارية المتنوعة عبر منصات متعددة.',
         'work-btn': 'عرض أعمالي',
@@ -147,7 +147,7 @@ const textContent = {
         'footer-portfolio': 'أعمالي',
         'footer-contact': 'تواصل',
         'contact-info-title': 'معلومات الاتصال',
-        'copyright-text': 'عبد القادر محمد © 2026. جميع الحقوق محفوظة.',
+        'copyright-text': '© 2026 عبد القادر محمد. جميع الحقوق محفوظة.',
         
         // Modal
         'modal-close': 'إغلاق'
@@ -158,16 +158,80 @@ const textContent = {
 const portfolioData = [
     {
         id: 1,
-        title: { en: 'Be Well', ar: 'بي ويل' },
-        industry: { en: 'Medical', ar: 'طبي' },
+        title: { en: 'Nukhbat Al-Atour', ar: 'نخبة العطور' },
+        industry: { en: 'E-commerce', ar: 'التجارة الإلكترونية' },
         description: {
-            en: 'Managed and grew the social media presence of a medical and physical therapy center over a long-term period. Built and executed a data-driven content strategy focused on increasing reach, engagement, and brand trust, while optimizing posts based on audience behavior and platform insights.',
-            ar: 'إدارة وتنمية تواجد مركز طبي وعلاج طبيعي على وسائل التواصل الاجتماعي على المدى الطويل. بناء وتنفيذ استراتيجية محتوى تعتمد على البيانات تركز على زيادة الوصول والتفاعل وثقة العلامة التجارية، مع تحسين المنشورات بناءً على سلوك الجمهور ورؤى المنصة.'
+            en: 'Led and executed a high-impact social media strategy for Nukhbat Al-Atour, focusing on premium visual storytelling, short-form video content, and influencer collaborations to strengthen brand positioning and drive sales.',
+            ar: 'قيادة وتنفيذ استراتيجية تسويق رقمي عالية التأثير لبراند نخبة العطور، مع التركيز على المحتوى البصري الاحترافي، فيديوهات الريلز القصيرة، والتعاون مع المؤثرين لتعزيز مكانة العلامة التجارية وزيادة المبيعات.'
         },
-        platforms: { en: 'Facebook, Instagram', ar: 'فيسبوك، انستغرام' },
+        platforms: { 
+            en: 'Facebook, Instagram, TikTok', 
+            ar: 'فيسبوك، انستغرام، تيك توك' 
+        },
+        results: { 
+            en: '2M+ total views across Facebook, Instagram, and TikTok, significant reach expansion, strong brand awareness growth, successful audience acquisition, 35% increase in website traffic, and a 20% conversion rate. (Highlights from our work with Nukhbat Al-Atour)',
+            ar: 'أكثر من 2 مليون مشاهدة عبر فيسبوك وإنستغرام وتيك توك، توسع قوي في نطاق الوصول، زيادة ملحوظة في الوعي بالعلامة التجارية، اكتساب جمهور جديد بنجاح، زيادة 35٪ في زيارات الموقع، ومعدل تحويل 20٪. (أبرز نتائج أعمالنا مع براند نخبة العطور)'
+        },
+        color: '#F59E0B',
+        icon: 'fas fa-crown',
+        media: [
+            { type: 'image', src: './assets/brand5/N.jpg' },
+            { type: 'video', src: './assets/brand5/v2.mp4', thumbnail: './assets/brand5/cv2.png' },
+            { type: 'video', src: './assets/brand5/v1.mp4', thumbnail: './assets/brand5/cv1.png' },
+            { type: 'video', src: './assets/brand5/v3.mp4', thumbnail: './assets/brand5/cv3.png' },
+            { type: 'video', src: './assets/brand5/v4.mp4', thumbnail: './assets/brand5/cv4.png' },
+        ]
+    },
+    {
+        id: 2,
+        title: { en: 'Ramadan Hweedy', ar: 'رمضان هويدي' },
+        industry: { en: 'Medical Content', ar: 'المجال الطبي' },
+        description: {
+            en: 'Collaborated with content creator Ramadan Howaidi to develop a comprehensive content strategy, covering video production, design, and scriptwriting, aimed at maximizing audience engagement across multiple platforms.',
+            ar: 'التعاون مع منشئ المحتوى رمضان هويدي لتطوير استراتيجية محتوى شاملة، تشمل إنتاج الفيديو، التصميم، وكتابة السكريبت، بهدف زيادة التفاعل والجمهور عبر منصات متعددة.'
+        },
+        platforms: { en: 'Facebook, Instagram, YouTube, TikTok', ar: 'فيسبوك، انستغرام، يوتيوب، تيك توك' },
         results: {
-            en: 'Achieved more than 5× increase in reach and engagement rates, with consistent growth in audience interaction and overall page performance',
-            ar: 'حققت أكثر من 5 أضعاف في معدلات الوصول والتفاعل، مع نمو مستمر في تفاعل الجمهور وأداء الصفحة بشكل عام'
+            en: 'Achieved over 2M total views across Facebook, Instagram, YouTube, and TikTok in the medical field. The work included full video production, creative design, and scriptwriting. These are selected examples of our collaborations with Ramadan Howaidi.',
+            ar: 'تحقيق أكثر من 2 مليون مشاهدة إجمالية عبر فيسبوك، انستغرام، يوتيوب، وتيك توك في المجال الطبي. العمل شمل إنتاج الفيديو بالكامل، التصميم الإبداعي، وكتابة السكريبت. هذه بعض الأعمال المختارة من تعاوننا مع رمضان هويدي.'
+        },
+        color: '#F43F5E',
+        icon: 'fas fa-video',
+        media: [
+            { type: 'image', src: './assets/brand8/mainR.jpeg' },
+            { type: 'image', src: './assets/brand8/r1.jpeg' },
+            { type: 'image', src: './assets/brand8/r2.jpeg' },
+            { type: 'image', src: './assets/brand8/r3.jpeg' },
+            { type: 'image', src: './assets/brand8/r4.jpeg' },
+            { type: 'image', src: './assets/brand8/r5.jpeg' },
+            { type: 'image', src: './assets/brand8/r6.jpeg' },
+            { type: 'image', src: './assets/brand8/r7.jpeg' },
+            { type: 'image', src: './assets/brand8/r8.jpeg' },
+            { type: 'image', src: './assets/brand8/r9.jpeg' },
+            { type: 'image', src: './assets/brand8/r10.jpeg' },
+            { type: 'image', src: './assets/brand8/r11.jpeg' },
+            { type: 'video', src: './assets/brand8/v1.mp4', thumbnail: './assets/brand8/mainR.jpeg' },
+            { type: 'video', src: './assets/brand8/v2.mp4', thumbnail: './assets/brand8/mainR.jpeg' },
+            { type: 'video', src: './assets/brand8/v3.mp4', thumbnail: './assets/brand8/mainR.jpeg' },
+            { type: 'video', src: './assets/brand8/v4.mp4', thumbnail: './assets/brand8/mainR.jpeg' },
+
+        ]
+    },
+    {
+        id: 3,
+        title: { en: 'Be Well', ar: 'بي ويل' },
+        industry: { en: 'Medical & Physical Therapy', ar: 'طبي وعلاج طبيعي' },
+        description: {
+            en: 'Led the long-term management and growth of Be Well’s social media presence, focusing on brand identity enhancement, audience awareness, and trust-building. Developed a clear content roadmap and data-driven strategy that optimized performance, strengthened brand positioning, and maximized audience engagement across platforms.',
+            ar: 'قيادة وإدارة وتنمية التواجد الرقمي لمركز Be Well على وسائل التواصل الاجتماعي على المدى الطويل، مع التركيز على تحسين الهوية البصرية، رفع الوعي لدى الجمهور، وبناء الثقة. تم وضع خريطة طريق واضحة واستراتيجية محتوى قائمة على البيانات ساهمت في تحسين الأداء وتعزيز مكانة العلامة التجارية وزيادة التفاعل.'
+        },
+        platforms: { 
+            en: 'Facebook, Instagram', 
+            ar: 'فيسبوك، انستغرام' 
+        },
+        results: {
+            en: 'Achieved more than 10× growth in page views and profile visits compared to the period before management, with over 5× increase in reach and engagement. Successfully improved brand identity, raised audience awareness, built trust with the target audience, and attracted a large new audience base. The showcased content represents selected highlights from our work with Be Well.',
+            ar: 'تحقيق نمو تجاوز 10 أضعاف في عدد المشاهدات وزيارات الصفحة مقارنة بالفترة السابقة لإدارة الحساب، إلى جانب أكثر من 5 أضعاف في معدلات الوصول والتفاعل. تم تحسين الهوية البصرية، رفع الوعي بالعلامة التجارية، وبناء الثقة مع الجمهور المستهدف، مع اكتساب شريحة كبيرة من الجمهور الجديد. المعروض هنا نماذج مختارة من أعمالنا مع مركز Be Well.'
         },
         color: '#6C63FF',
         icon: 'fas fa-heartbeat',
@@ -181,16 +245,20 @@ const portfolioData = [
             { type: 'image', src: './assets/brand1/be-well6.jpg' }
         ]
     },
+    
     {
-        id: 2,
+        id: 4,
         title: { en: 'Sigma Store', ar: 'سيجما ستور' },
         industry: { en: 'Gaming', ar: 'ألعاب' },
         description: {
-            en: 'Created a content strategy and influencer partnerships for a gaming brand, increasing engagement by 60% and brand awareness across multiple platforms.',
-            ar: 'إنشاء استراتيجية محتوى وشراكات مؤثرين لعلامة تجارية للألعاب، مما زاد التفاعل بنسبة 60٪ والوعي بالعلامة التجارية عبر منصات متعددة.'
+            en: 'Created a content strategy and influencer partnerships for a gaming brand, focusing on driving sales, consistent target achievement, and increasing brand awareness across multiple platforms.',
+            ar: 'إنشاء استراتيجية محتوى وشراكات مع المؤثرين لعلامة تجارية للألعاب، مع التركيز على زيادة المبيعات وتحقيق الأهداف المستمرة، بالإضافة إلى رفع الوعي بالعلامة التجارية عبر منصات متعددة.'
         },
         platforms: { en: 'Instagram, TikTok, Discord', ar: 'انستغرام، تيك توك، ديسكورد' },
-        results: { en: '60% engagement increase, 15K new followers', ar: 'زيادة التفاعل 60٪، 15 ألف متابع جديد' },
+        results: {
+            en: 'Achieved 60% engagement increase, gained 15K new followers, and consistently met sales targets through strategic content planning and influencer collaborations. The showcased content highlights our effective approach to driving revenue and audience growth for Sigma Store.',
+            ar: 'زيادة التفاعل بنسبة 60٪، واكتساب 15 ألف متابع جديد، مع تحقيق الأهداف البيعية بشكل مستمر من خلال التخطيط الاستراتيجي للمحتوى والتعاون مع المؤثرين. المعروض هنا يبرز أمثلة من أسلوبنا الفعّال في زيادة المبيعات ونمو الجمهور لسيجما ستور.'
+        },
         color: '#FF6584',
         icon: 'fas fa-gamepad',
         media: [
@@ -205,16 +273,20 @@ const portfolioData = [
             { type: 'image', src: './assets/brand2/ss-store8.jpg' }
         ]
     },
+    
     {
-        id: 3,
+        id: 5,
         title: { en: 'Hydra Tech', ar: 'هايدرا تك' },
         industry: { en: 'Technology', ar: 'تكنولوجيا' },
         description: {
-            en: 'Managed social media presence for a technology company, focusing on B2B content and thought leadership strategies.',
-            ar: 'إدارة التواجد على وسائل التواصل الاجتماعي لشركة تكنولوجيا، مع التركيز على محتوى B2B واستراتيجيات القيادة الفكرية.'
+            en: 'Managed social media presence for a technology company, focusing on B2B content and thought leadership strategies, while building the brand’s visual identity from scratch.',
+            ar: 'إدارة التواجد على وسائل التواصل الاجتماعي لشركة تكنولوجيا، مع التركيز على محتوى B2B واستراتيجيات القيادة الفكرية، وبناء الهوية البصرية للبراند من الصفر.'
         },
-        platforms: { en: 'LinkedIn, Twitter, YouTube', ar: 'لينكد إن، تويتر، يوتيوب' },
-        results: { en: '200% increase in leads, 150% follower growth', ar: 'زيادة 200٪ في العملاء المحتملين، نمو 150٪ في المتابعين' },
+        platforms: { en: 'Facebook, Instagram, Twitter, TikTok', ar: 'فيسبوك، انستغرام، تويتر، تيك توك' },
+        results: {
+            en: 'Built the brand’s visual identity from scratch, enabling Hydra Tech to compete with other startups in Kafr El-Sheikh. Successfully reached clients and companies across Egypt, the Gulf, and Europe, delivering diverse solutions including websites, applications, and desktop software. Achieved 200% increase in leads and 150% follower growth, highlighting strong market impact and business reach.',
+            ar: 'بناء الهوية البصرية للبراند من الصفر، مما مكّن هايدرا تك من المنافسة مع الشركات الناشئة الأخرى في نطاق كفر الشيخ. تم الوصول بنجاح إلى عملاء وشركات في مصر والخليج وأوروبا، وتقديم حلول متنوعة تشمل إنشاء مواقع ويب، تطبيقات موبايل، وبرمجيات سطح المكتب. تحقيق زيادة 200٪ في العملاء المحتملين ونمو 150٪ في المتابعين، مما يبرز التأثير القوي والوصول الفعّال في السوق.'
+        },
         color: '#36D1DC',
         icon: 'fas fa-microchip',
         media: [
@@ -227,16 +299,20 @@ const portfolioData = [
             { type: 'image', src: './assets/brand3/hydra6.jpg' }
         ]
     },
+    
     {
-        id: 4,
+        id: 6,
         title: { en: 'LinkMarket', ar: 'لينك ماركت' },
         industry: { en: 'Marketing', ar: 'تسويق' },
         description: {
             en: 'Built social media presence from scratch for a marketing agency, positioning them as industry thought leaders.',
             ar: 'بناء تواجد على وسائل التواصل الاجتماعي من الصفر لوكالة تسويق، ووضعهم كقادة فكر في الصناعة.'
         },
-        platforms: { en: 'LinkedIn, Instagram, Facebook', ar: 'لينكد إن، انستغرام، فيسبوك' },
-        results: { en: 'Generated 500+ qualified leads, 200% follower growth', ar: 'توليد 500+ عميل محتمل مؤهل، نمو 200٪ في المتابعين' },
+        platforms: { en: 'Facebook, Instagram', ar: 'فيسبوك، انستغرام' },
+        results: {
+            en: 'Developed the brand’s visual identity and content strategy from scratch, increased audience awareness, and positioned LinkMarket as a competitive force in the marketing industry, leveraging their prior expertise and capabilities. Generated 500+ qualified leads and achieved 200% follower growth. These are selected examples of our work with LinkMarket across Facebook and Instagram.',
+            ar: 'تطوير الهوية البصرية للبراند واستراتيجية المحتوى من الصفر، زيادة الوعي لدى الجمهور، وجعل لينك ماركت تنافس بقوة في مجال التسويق لما لها من خبرات وكفاءات سابقة. تم توليد أكثر من 500 عميل محتمل مؤهل، وتحقيق نمو 200٪ في المتابعين. هذه أمثلة مختارة من أعمالنا مع لينك ماركت على فيسبوك وانستغرام.'
+        },
         color: '#10B981',
         icon: 'fas fa-chart-line',
         media: [
@@ -249,35 +325,21 @@ const portfolioData = [
             { type: 'image', src: './assets/brand4/link6.jpg' }
         ]
     },
+       
+
     {
-        id: 5,
-        title: { en: 'Nukhbat Al-Atour', ar: 'نخبة العطور' },
-        industry: { en: 'E-commerce', ar: 'التجارة الإلكترونية' },
-        description: {
-            en: 'Developed a comprehensive e-commerce social media strategy for a perfume brand, focusing on visual storytelling and influencer collaborations.',
-            ar: 'تطوير استراتيجية شاملة للتجارة الإلكترونية على وسائل التواصل الاجتماعي لعلامة تجارية للعطور، مع التركيز على سرد القصص البصري والتعاون مع المؤثرين.'
-        },
-        platforms: { en: 'Instagram, Pinterest, Facebook', ar: 'انستغرام، بنترست، فيسبوك' },
-        results: { en: '35% increase in website traffic, 20% conversion rate', ar: 'زيادة 35٪ في حركة المرور على الموقع، معدل تحويل 20٪' },
-        color: '#F59E0B',
-        icon: 'fas fa-crown',
-        media: [
-            { type: 'image', src: './assets/brand5/N.jpg' },
-            { type: 'video', src: './assets/brand5/v1.mp4', thumbnail: './assets/brand5/N.jpg' },
-            { type: 'video', src: './assets/brand5/v2.mp4', thumbnail: './assets/brand5/N.jpg' },
-            { type: 'video', src: './assets/brand5/v3.mp4', thumbnail: './assets/brand5/N.jpg' },
-        ]
-    },
-    {
-        id: 6,
-        title: { en: 'Ghabor Academy', ar: 'أكاديمية غابور' },
+        id: 7,
+        title: { en: 'Ghabour Academy', ar: 'غبور اكاديمي' },
         industry: { en: 'Education', ar: 'تعليم' },
         description: {
-            en: 'Created a comprehensive social media strategy for an educational platform, including video content and student engagement campaigns.',
-            ar: 'إنشاء استراتيجية شاملة لوسائل التواصل الاجتماعي لمنصة تعليمية، بما في ذلك محتوى الفيديو وحملات تفاعل الطلاب.'
+            en: 'Created a focused social media strategy for an educational platform specializing in mathematics, including short-form video content and student engagement campaigns.',
+            ar: 'إنشاء استراتيجية مركزة لوسائل التواصل الاجتماعي لمنصة تعليمية متخصصة في مادة الرياضيات، مع إنتاج محتوى فيديو قصير وحملات تفاعل للطلاب.'
         },
-        platforms: { en: 'YouTube, Instagram, Facebook', ar: 'يوتيوب، انستغرام، فيسبوك' },
-        results: { en: 'Tripled enrollment, 80% increase in engagement', ar: 'تضاعف التسجيل ثلاث مرات، زيادة 80٪ في التفاعل' },
+        platforms: { en: 'Facebook, TikTok', ar: 'فيسبوك، تيك توك' },
+        results: {
+            en: 'Although the collaboration was short, it was an impactful and insightful journey within the mathematics education field. With only two videos published on Facebook and TikTok, we surpassed 90K total views, demonstrating strong audience interest and content effectiveness. These are selected examples from our work with Ghabour Academy.',
+            ar: 'رغم أن فترة التعاون لم تكن طويلة، إلا أنها كانت رحلة مؤثرة أضافت لنا خبرة في المجال التعليمي وخاصة مادة الرياضيات. من خلال فيديوهين فقط على فيسبوك وتيك توك، تم كسر حاجز 90 ألف مشاهدة، مما يعكس قوة المحتوى واهتمام الجمهور. المعروض هنا أمثلة مختارة من أعمالنا مع غبور اكاديمي.'
+        },
         color: '#8B5CF6',
         icon: 'fas fa-graduation-cap',
         media: [
@@ -286,8 +348,9 @@ const portfolioData = [
             { type: 'video', src: './assets/brand6/v2.mp4', thumbnail: './assets/brand6/g1.png' },
         ]
     },
+    
     {
-        id: 7,
+        id: 8,
         title: { en: 'Mess', ar: 'ميس' },
         industry: { en: 'Fashion', ar: 'أزياء' },
         description: {
@@ -304,6 +367,8 @@ const portfolioData = [
             { type: 'video', src: './assets/brand7/m2.mp4', thumbnail: './assets/brand7/m.jpeg' },
         ]
     },
+
+    
 ];
 
 // Placeholder images for portfolio items
